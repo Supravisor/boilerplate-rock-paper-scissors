@@ -10,5 +10,6 @@ def player(prev_play, opponent_history=[], sequences={}):
         return "P"
 
     if len(opponent_history) > 6:
+        opponent_history.pop(0)
 
     return guess
