@@ -2,7 +2,9 @@
 
 def player(prev_play, opponent_history=[], sequences={}):
     play = 5
-    opponent_history.append(prev_play)
+
+    if prev_play != '':
+        opponent_history.append(prev_play)
 
     guess = "R"
     if len(opponent_history) > 2:
