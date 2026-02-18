@@ -13,5 +13,6 @@ def player(prev_play, opponent_history=[], sequences={}):
         opponent_history.pop(0)
 
         sequence = "".join(opponent_history)
+        sequences[sequence] = sequences.get(sequence, 0) + 1
 
     return guess
