@@ -14,5 +14,7 @@ def player(prev_play, opponent_history=[], sequences={}):
 
         sequence = "".join(opponent_history)
         sequences[sequence] = sequences.get(sequence, 0) + 1
-
         sequence = "".join(opponent_history[1:])
+
+        predict = max([sequence + "R", sequence + "P", sequence + "S"], key=lambda key:
+            sequences.get(key,0))[-1]
